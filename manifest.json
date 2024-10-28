@@ -1,43 +1,42 @@
-
-{  
-  "manifest_version": 3,  
-  "name": "推特描述备注共同好友-----owl",  
-  "version": "1.0",  
-  "permissions": [  
+{
+  "manifest_version": 3,
+  "name": "推特描述备注共同好友-----owl",
+  "version": "1.0",
+  "permissions": [
     "webRequest",
     "tabs",
     "activeTab",
-    "cookies",  
-    "webNavigation" ,
+    "cookies",
+    "webNavigation",
     "webRequestBlocking",
     "*://x.com/*"
-  ],  
-  "background": {  
+  ],
+  "description": "用token快速登录推特，owl-2024.",
+  "icons": {
+    "128": "icons/logo.png"
+  },
+  "background": {
     "scripts": ["background.js"],
     "persistent": false
-  },  
-  "host_permissions": [
-    "*://x.com/*"
-  ],
-  "content_scripts": [  
-    {  
-      "matches": ["https://*.x.com/*"],  
-      "js": ["content.js"]  ,
+  },
+  "host_permissions": ["*://x.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://*.x.com/*"],
+      "js": ["content.js"],
       "run_at": "document_start",
-      "all_frames":true  
-    }  
-  ],  
+      "all_frames": true
+    }
+  ],
 
   "web_accessible_resources": [
     {
-      "resources": ["override-fetch.js", "override-xhr.js","override-xhr2.js"],
+      "resources": ["override-fetch.js", "override-xhr.js", "override-xhr2.js"],
       "matches": ["<all_urls>"]
     }
   ],
-  "content_security_policy": {  
-    "extension_pages": "script-src 'self'; object-src 'self'",  
-    "sandboxed_pages": "script-src 'self'; object-src 'self'" 
-  }  
-  
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'",
+    "sandboxed_pages": "script-src 'self'; object-src 'self'"
+  }
 }
-
