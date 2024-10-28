@@ -3,3 +3,4 @@
 https://x.com/search?q=music&src=typed_query&f=live
 
 比如如上网址打开后，显示kol的 的好友共同关注数。
+![这是一张图片](./1.png "示例")

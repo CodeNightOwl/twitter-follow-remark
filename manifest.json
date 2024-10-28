@@ -11,7 +11,7 @@
     "webRequestBlocking",
     "*://x.com/*"
   ],
-  "description": "用token快速登录推特，owl-2024.",
+  "description": "推特描述备注共同好友",
   "icons": {
     "128": "icons/logo.png"
   },
